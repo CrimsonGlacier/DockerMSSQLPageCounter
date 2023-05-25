@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1 id ="header">Page View Count: </h1>
+    <script>
+	    fetch("http://localhost:5047/")
+		    .then((res) => res.json())
+		    .then((data) => {
+                   const lastItem = data[data.length - 1]['viewcount'];
+					console.log("lastItem:",[0]['viewcount']); // Output the viewCount number
+					var header=document.getElementById("header");
+					document.querySelector("h1").append(lastItem);
+					const cors = require("cors")
+					app.use(cors)})
+
+           .catch((error) => {
+			       console.error("Error:", error); // Handle any errors that may occur
+		       })
+    </script>
+	</body>
+</html>
