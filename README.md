@@ -9,15 +9,15 @@ Having a page counter as a result of this deployment is simply a means to an end
 
 instructions:
 
-Download the github repo as a zip and unpack it to your desired location \n
+Download the github repo as a zip and unpack it to your desired location
   navigate to \DockerMSSQLPageCounter-main\SQL
   Open the dockerfile and modify the SA_PASSWORD environmental variable to a password of your choosing that follows the following constraints: 
   	At least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.
 	
   Open CMD in \DockerMSSQLPageCounter-main\SQL
-    type: docker build -t sql1 .
-    type: docker run -p 1433:1433 -d sql1
-    type: docker network inspect bridge
+   > type: docker build -t sql1 .
+   > type: docker run -p 1433:1433 -d sql1
+   > type: docker network inspect bridge
    	 find the "sql1" IPv4Address and copy it to a notepad, the cidr notation does not need to be copied
 	 
 navigate to /setup files/ and right click on main.py and open in notepad
