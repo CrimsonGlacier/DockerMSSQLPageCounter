@@ -16,6 +16,7 @@ Download the github repo as a zip and unpack it to your desired location
 	
   Open CMD in \DockerMSSQLPageCounter-main\SQL
    > type: docker build -t sql1 .
+   
    > type: docker run -p 1433:1433 -d sql1
    > type: docker network inspect bridge
    	 find the "sql1" IPv4Address and copy it to a notepad, the cidr notation does not need to be copied
