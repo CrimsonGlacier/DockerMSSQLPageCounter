@@ -1,5 +1,5 @@
 # DockerMSSQLPageCounter
-simple page counter
+A simple page counter using Docker to deploy a Python, NGINX, and Microsoft SQL container.
 
 
 
