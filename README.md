@@ -26,10 +26,10 @@ Download the github repo as a zip and unpack it to your desired location
 navigate to /setup files/ and right click on main.py and open in notepad
 in the section where it says: 
 
-def connection():
-server = '172.17.0.2,1433' 
-...
-password = '<password hehere>'
+> def connection():
+> server = '172.17.0.2,1433' 
+> ...
+> password = '<password hehere>'
       replace the server ip address with the sql1 IPv4Address you copied down earlier, keep the port number 1433 and save the file
       replcae the password with the password you created for the SA_PASSWORD env variable
 	
