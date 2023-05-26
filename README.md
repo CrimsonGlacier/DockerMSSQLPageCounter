@@ -4,13 +4,13 @@ A simple page counter using Docker to deploy a Python, NGINX, and Microsoft SQL 
 
 
 This is basically a local implemenation using Docker of my AzurePythonWebsite project. It accomplishes what that project does but at a local scale and it uses Docker as a means to deploy the solution to an internal network.
-One advantage of having a local deployment like this is that it would cut down on costs that would come from an Azure deployment if there was a need to achieve something similar to this at an internal network only level.
-Having a page counter as a result of this deployment is simply a means to an end and with some SQL table and GET/POST request modifications i'm sure this solution can be adapted to fit various different needs.
+One advantage of having a local deployment like this is that it can cut down on costs that would come from an Azure deployment if there was a need to achieve something similar to this at an internal network only level.
+Having a page counter as a result of this deployment is simply a means to an end and with some SQL table and GET/POST request modifications I'm sure this solution can be adapted to fit various different needs.
 
 Instructions:
 
 Download the github repo as a zip and unpack it to your desired location,
-  navigate to \DockerMSSQLPageCounter-main\SQL.
+  Navigate to \DockerMSSQLPageCounter-main\SQL.
   Open the dockerfile and modify the SA_PASSWORD environmental variable to a password of your choosing that follows the following constraints: 
   	At least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.
 	
@@ -24,17 +24,17 @@ Download the github repo as a zip and unpack it to your desired location,
    
 Find the "sql1" IPv4Address and copy it to a notepad, the CIDR notation does not need to be copied.
 	 
-Navigate to /setup files/ and right click on main.py and open in notepad. In the section where it says: 
+Navigate to /setup files/, right click on main.py and open in notepad. In the section where it says: 
 
     def connection():
     server = '172.17.0.2,1433' 
     ...
     password = '<password hehere>'
     
-Replace the server ip address with the sql1 IPv4Address you copied down earlier, keep the port number 1433 and save the file,
-        replace the password with the password you created for the SA_PASSWORD env variable
+Replace the server IP address with the sql1 IPv4Address you copied down earlier, keep the port number 1433 and save the file,
+        replace the password with the password you created for the SA_PASSWORD environmental variable.
 	
-Afterwards, input the following commands into cmd:
+Afterwards, input the following commands into CMD:
 
     cd ..
     docker build -t pythondocker -f Dockerfile .
