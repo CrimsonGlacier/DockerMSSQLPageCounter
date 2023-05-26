@@ -34,11 +34,13 @@ navigate to /setup files/ and right click on main.py and open in notepad. In the
 replace the server ip address with the sql1 IPv4Address you copied down earlier, keep the port number 1433 and save the file,
         replace the password with the password you created for the SA_PASSWORD env variable
 	
-IN CMD type "cd .."
-    type: docker build -t pythondocker -f Dockerfile .
-    type: docker run -d -p 5047:80 pythondocker
-    type: cd nginx
-    type: docker build -t nginx -f Dockerfile .
-    type: docker run -d -p 8080:80 nginx
+Afterwards, input the following commands into cmd:
+
+    cd ..
+    docker build -t pythondocker -f Dockerfile .
+    docker run -d -p 5047:80 pythondocker
+    cd nginx
+    docker build -t nginx -f Dockerfile .
+    docker run -d -p 8080:80 nginx
 	
 go to http://localhost:8080/ and you should see an html page displaying "Page View Count: #" with a number that updates every time the page is refreshed or accessed.
