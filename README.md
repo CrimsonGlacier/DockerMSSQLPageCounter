@@ -18,11 +18,11 @@ Download the github repo as a zip and unpack it to your desired location
   
      docker build -t sql1 .
      
-   
-     docker run -p 1433:1433 -d sql1
+
+         docker run -p 1433:1433 -d sql1
      
    
-     docker network inspect bridge
+                     docker network inspect bridge
    
 find the "sql1" IPv4Address and copy it to a notepad, the cidr notation does not need to be copied
 	 
