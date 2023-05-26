@@ -9,7 +9,11 @@ ENV MSSQL_PID Express
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
+COPY . /usr/local/bin/
+
+# Grant permissions for the run-initialization script to be executable
 RUN chmod +x /usr/src/app/run-initialization.sh
+RUN chmod +x /usr/local/bin/run-initialization.sh
 
 EXPOSE 1433
 
