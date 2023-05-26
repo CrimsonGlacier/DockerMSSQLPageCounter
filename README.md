@@ -22,7 +22,7 @@ Download the github repo as a zip and unpack it to your desired location,
      
      docker network inspect bridge
    
-Find the "sql1" IPv4Address and copy it to a notepad, the cidr notation does not need to be copied.
+Find the "sql1" IPv4Address and copy it to a notepad, the CIDR notation does not need to be copied.
 	 
 Navigate to /setup files/ and right click on main.py and open in notepad. In the section where it says: 
 
