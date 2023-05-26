@@ -11,28 +11,30 @@ instructions:
 
 Download the github repo as a zip and unpack it to your desired location
   navigate to \DockerMSSQLPageCounter-main\SQL
-  Open the dockerfile and modify the SA_PASSWORD environmental variable to a password of your choosing that follows the following constraints : At least 8 characters including uppercase, lowercase letters, base-10 digits     and/or non-alphanumeric symbols.
+  Open the dockerfile and modify the SA_PASSWORD environmental variable to a password of your choosing that follows the following constraints: 
+  	At least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.
+	
   Open CMD in \DockerMSSQLPageCounter-main\SQL
-    docker build -t sql1 .
-    docker run -p 1433:1433 -d sql1
-    docker network inspect bridge
-    find the "sql1" IPv4Address and copy it to a notepad, the cidr notation does not need to be copied
-    navigate to /setup files/ and right click on main.py and open in notepad
-    in the section where it says: 
+    type: docker build -t sql1 .
+    type: docker run -p 1433:1433 -d sql1
+    type: docker network inspect bridge
+   	 find the "sql1" IPv4Address and copy it to a notepad, the cidr notation does not need to be copied
+	 
+navigate to /setup files/ and right click on main.py and open in notepad
+in the section where it says: 
 
-	    def connection():
-	    server = '172.17.0.2,1433' 
-      ...
-      password = '<password hehere>'
-      
-      
+def connection():
+server = '172.17.0.2,1433' 
+...
+password = '<password hehere>'
       replace the server ip address with the sql1 IPv4Address you copied down earlier, keep the port number 1433 and save the file
       replcae the password with the password you created for the SA_PASSWORD env variable
-    IN cmd type "cd .."
+	
+IN CMD type "cd .."
     type: docker build -t pythondocker -f Dockerfile .
     type: docker run -d -p 5047:80 pythondocker
     type: cd nginx
     type: docker build -t nginx -f Dockerfile .
     type: docker run -d -p 8080:80 nginx
-    
-    go to http://localhost:8080/ and you should see an html page displaying "Page View Count: #" with a number that updates every time the page is refreshed or accessed.
+	
+go to http://localhost:8080/ and you should see an html page displaying "Page View Count: #" with a number that updates every time the page is refreshed or accessed.
