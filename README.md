@@ -31,8 +31,8 @@ navigate to /setup files/ and right click on main.py and open in notepad. In the
     ...
     password = '<password hehere>'
     
-replace the server ip address with the sql1 IPv4Address you copied down earlier, keep the port number 1433 and save the file
-        replcae the password with the password you created for the SA_PASSWORD env variable
+replace the server ip address with the sql1 IPv4Address you copied down earlier, keep the port number 1433 and save the file,
+        replace the password with the password you created for the SA_PASSWORD env variable
 	
 IN CMD type "cd .."
     type: docker build -t pythondocker -f Dockerfile .
