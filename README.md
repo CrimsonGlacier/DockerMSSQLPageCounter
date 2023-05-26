@@ -9,7 +9,7 @@ Having a page counter as a result of this deployment is simply a means to an end
 
 instructions:
 
-Download the github repo as a zip and unpack it to your desired location
+Download the github repo as a zip and unpack it to your desired location,
   navigate to \DockerMSSQLPageCounter-main\SQL
   Open the dockerfile and modify the SA_PASSWORD environmental variable to a password of your choosing that follows the following constraints: 
   	At least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.
