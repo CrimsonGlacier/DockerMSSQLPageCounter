@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/mssql/server:2017-latest-ubuntu
 
-ENV SA_PASSWORD Onlythestrong99!
+ENV SA_PASSWORD ENTER_YOUR_PASSWORD_HERE
 ENV ACCEPT_EULA Y
 ENV MSSQL_PID Express
 
