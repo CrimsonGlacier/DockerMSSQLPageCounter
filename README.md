@@ -14,6 +14,8 @@ Download the github repo as a zip and unpack it to your desired location,
   Open the dockerfile and modify the SA_PASSWORD environmental variable to a password of your choosing that follows the following constraints: 
   	At least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.
 	
+Change password in SQL/run-initialization.sh as well to the one you just made.
+	
   Open CMD in \DockerMSSQLPageCounter-main\SQL, and input the following commands:
   
      docker build -t sql1 .
