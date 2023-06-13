@@ -29,7 +29,7 @@ Navigate to /setup files/, right click on main.py and open in notepad. In the se
     def connection():
     server = '172.17.0.2,1433' 
     ...
-    password = '<password hehere>'
+    password = '<ENTER_YOUR_PASSWORD_HERE>'
     
 Replace the server IP address with the sql1 IPv4Address you copied down earlier, keep the port number 1433 and save the file,
         replace the password with the password you created for the SA_PASSWORD environmental variable.
