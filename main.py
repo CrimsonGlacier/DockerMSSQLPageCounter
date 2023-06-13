@@ -20,7 +20,7 @@ def connection():
     server = '172.17.0.2,1433'
     database = 'TestDB' 
     username = 'SA' 
-    password = 'ENTER_YOUR_PASSWORD_HERE'
+    password = '<ENTER_YOUR_PASSWORD_HERE>'
     Driver = 'DRIVER={/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.10.so.1.1};SERVER='+server+';DATABASE='+database+';ENCRYPT=no;UID='+username+';PWD='+ password
     cnxn = pyodbc.connect('DRIVER={/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.10.so.1.1};SERVER='+server+';DATABASE='+database+';ENCRYPT=no;UID='+username+';PWD='+ password)
     cursor = cnxn.cursor()
